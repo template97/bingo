@@ -1,0 +1,26 @@
+{
+  "name": "bingo",
+  "version": "1.0.0",
+  "description": "yuju's first side project",
+  "main": "helloWorld.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/template97/bingo.git"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "yuju",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/template97/bingo/issues"
+  },
+  "homepage": "https://github.com/template97/bingo#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.0.4"
+  }
+}
