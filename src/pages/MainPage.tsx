@@ -1,8 +1,6 @@
 import React from "react";
-import logo from "./logo.svg";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-const MainPage = () => {
+const MainPage: React.FC = () => {
   return <div>main</div>;
 };
 

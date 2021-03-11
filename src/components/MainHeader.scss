@@ -1,0 +1,9 @@
+@import "../themeColor.scss";
+
+.main-header {
+  width: 100vw;
+  height: 60px;
+
+  background-color: white;
+  border-bottom: 1px solid $yuz-gray;
+}
