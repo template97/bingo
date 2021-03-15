@@ -20,7 +20,14 @@
         width: 120px;
         height: 120px;
 
+        box-sizing: border-box;
         border: 1px solid $yuz-gray;
+
+        cursor: pointer;
+        transition: all 0.2s;
+        &:hover{
+          background-color: $main-color;
+        }
       }
     }
   }

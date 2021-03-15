@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import useBingoList from "../../hooks/useBingoList";
+import useBingoMatrix from "../../hooks/useBingoMatrix";
+import { IBingoDto } from "../../modal/interface/bingo.interface";
 import "./BingoCreator.scss";
 import BingoSizeSetter from "./BingoSizeSetter";
 
@@ -7,31 +10,22 @@ interface Props {}
 const BingoCreator: React.FC<Props> = (props) => {
   const [row, setRow] = useState(4);
   const [col, setCol] = useState(4);
-
-  const getBingoRow = () => {
-    let rowElement = [];
-    for (let i = 0; i < col; i++) {
-      rowElement.push(i);
-    }
-
-    return (
-      <div className="bingo-row-element">
-        {rowElement.map((item) => (
-          <div className="bingo-element"></div>
-        ))}
-      </div>
-    );
-  };
+  const bingoList: IBingoDto[][] = useBingoMatrix(row, col);
 
   const getBingo = () => {
-    let bingoElement = [];
-    for (let i = 0; i < row; i++) {
-      bingoElement.push(i);
-    }
-
     return (
       <div className="bingo-container">
-        {bingoElement.map((item) => getBingoRow())}
+        {bingoList &&
+          bingoList.map((bingoRow, i) => (
+            <div className="bingo-row-element">
+              {bingoRow.map((bingoElement) => (
+                <div className="bingo-element" key={i}>
+                  {bingoElement.id}
+                  {bingoElement.content}
+                </div>
+              ))}
+            </div>
+          ))}
       </div>
     );
   };
