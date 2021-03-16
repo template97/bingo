@@ -5,4 +5,5 @@ export interface BingoDataState {
   error: boolean;
 
   bingoList: IBingoDto[];
+  selectedBingoId: number;
 }

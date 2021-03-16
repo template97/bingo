@@ -19,7 +19,7 @@ const BingoSizeSetter: React.FC<Props> = (props) => {
           className="size-setter row"
           style={{ transform: "translateY(" + (4 - props.row) * 32 + "px)" }}
         >
-          {rowSizeList.map((row) => (
+          {rowSizeList.map((row, i) => (
             <div
               className={`size-setter-element ${
                 props.row === row ? "selected" : ""
@@ -27,6 +27,7 @@ const BingoSizeSetter: React.FC<Props> = (props) => {
               onClick={() => {
                 props.onRowSelect(row);
               }}
+              key={i}
             >
               {row}
             </div>
@@ -39,7 +40,7 @@ const BingoSizeSetter: React.FC<Props> = (props) => {
           className="size-setter col"
           style={{ transform: "translateY(" + (4 - props.col) * 32 + "px)" }}
         >
-          {colSizeList.map((col) => (
+          {colSizeList.map((col, i) => (
             <div
               className={`size-setter-element ${
                 props.col === col ? "selected" : ""
@@ -47,6 +48,7 @@ const BingoSizeSetter: React.FC<Props> = (props) => {
               onClick={() => {
                 props.onColSelect(col);
               }}
+              key={i}
             >
               {col}
             </div>

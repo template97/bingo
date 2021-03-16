@@ -1,0 +1,19 @@
+@import "../../themeColor.scss";
+
+.bingo-decorater-container {
+    width: 540px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .bingo-decorater{
+        width: 480px;
+        height: 480px;
+
+        box-sizing: border-box;
+        border: 1px solid $yuz-gray;
+    }
+}
